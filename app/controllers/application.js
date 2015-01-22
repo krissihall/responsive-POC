@@ -3,17 +3,15 @@ import jQuery from 'jquery';
 
 export default Ember.Controller.extend({
 
-  breakPoint: 'Large',
-
   marginTop: 0,
   marginBottom: 0,
   marginRight: 0,
   marginLeft: 0,
 
-  xtrSmallBreak: 480,
+  xtrSmallBreak: 320,
   smallBreak: 768,
-  mediumBreak: 992,
-  largeBreak: 1200,
+  mediumBreak: 1024,
+  largeBreak: 1366,
 
   isXtrSmall: false,
   isSmall: false,
@@ -57,12 +55,10 @@ export default Ember.Controller.extend({
     if(windowWidth <= this.get('xtrSmallBreak')){
       this.set('breakPointName', 'Xtr-Small');
       this.set('isXtrSmall', true);
-    } else if(windowWidth > this.get('xtrSmallBreak')
-      && windowWidth <= this.get('smallBreak')){
+    } else if(windowWidth > this.get('xtrSmallBreak') && windowWidth <= this.get('smallBreak')){
       this.set('breakPointName', 'Small');
       this.set('isSmall', true);
-    } else if(windowWidth > this.get('smallBreak')
-      && windowWidth <= this.get('mediumBreak')){
+    } else if(windowWidth > this.get('smallBreak') && windowWidth <= this.get('mediumBreak')){
       this.set('breakPointName', 'Medium');
       this.set('isMedium', true);
     } else if(windowWidth > this.get('mediumBreak')){

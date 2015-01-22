@@ -1,5 +1,6 @@
 footer
   .links
+    transition()
     ul
       margin 0
       padding 0
@@ -17,7 +18,9 @@ footer
           text-transform uppercase
         .glyphicon,
         .aeoicon
-          width 5%
+          width 4%
+          margin-right $padding-base-horizontal
+          font-size-to-em(24)
     &.links1
       .links-signup
         li
@@ -48,9 +51,14 @@ footer
             margin-bottom 0
 
     &.links3
+      .glyphicon,
+      .aeoicon
+        margin-right $padding-base-horizontal
+        width 4%
+        font-size-to-em(24)
       .links-contact-us
         li
-          margin (($padding-base-vertical * 3) / 2)
+          margin (($padding-base-vertical * 3) / 2) 0
           font-size-to-em(17)
           &:first-of-type
             margin-top 0
@@ -58,6 +66,8 @@ footer
           &:last-of-type
             margin-bottom 0
       .social-media
+        @media screen and (max-width: $screen-sm)
+          max-width 300px
         margin-top ($padding-large-horizontal * 2)
         h4
           font-size-to-em(17)

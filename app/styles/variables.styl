@@ -42,10 +42,10 @@ $brand-font =            "Gotham Book", "HelveticaNeue-Light", "Helvetica Neue L
 $medium-font =           "Gotham Medium";
 $bold-font =             "Gotham Bold";
 
-$screen-xs =             480px;
+$screen-xs =             320px;
 $screen-sm =             768px;
-$screen-md =             992px;
-$screen-lg =             1200px;
+$screen-md =             1024px;
+$screen-lg =             1366px;
 
 //## Font Sizing from Bootstrap
 $font-base =              22;
@@ -108,6 +108,25 @@ box-sizing(type = border-box)
   -webkit-box-sizing type
   -moz-box-sizing type
   box-sizing type
+  
+box-shadow-one-side(side = bottom, color = #000, alpha = 71)
+  opacity = (alpha / 100)
+  if 'top' in side
+    -webkit-box-shadow 0 -10px 19px -9px rgba(color, opacity)
+    -moz-box-shadow 0 -10px 19px -9px rgba(color, opacity)
+    box-shadow 0 -10px 19px -9px rgba(color, opacity)
+  if 'bottom' in side
+    -webkit-box-shadow 0 10px 19px -9px rgba(color, opacity)
+    -moz-box-shadow 0 10px 19px -9px rgba(color, opacity)
+    box-shadow 0 10px 19px -9px rgba(color, opacity)
+  if 'left' in side
+    -webkit-box-shadow -10px 0 19px -9px rgba(color, opacity)
+    -moz-box-shadow -10px 0 19px -9px rgba(color, opacity)
+    box-shadow -10px 0 19px -9px rgba(color, opacity)
+  if 'right' in side
+    -webkit-box-shadow 10px 0 19px -9px rgba(color, opacity)
+    -moz-box-shadow 10px 0 19px -9px rgba(color, opacity)
+    box-shadow 10px 0 19px -9px rgba(color, opacity)
 
 transition()
   -webkit-transition all .5s

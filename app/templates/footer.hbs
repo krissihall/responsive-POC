@@ -1,4 +1,6 @@
 <footer class="section clearfix">
+  <div class="row">
+
   <div class="links links1 col-md-4">
     <ul class="links-signup">
       <li class="hidden-xs hidden-sm">
@@ -50,17 +52,6 @@
   </div>
   <div class="links links2 col-xs-12 col-sm-6 col-md-4">
     <ul class="links-common">
-      {{#if isSmall}}
-        <li class="visible-xs-block visible-sm-block hidden-md hidden-lg">
-          <a>
-            {{glyph-icon set='aeo' type='phones'}}
-            Mobile App
-          </a>
-          <small class="hidden-xs hidden-sm">
-            Shop &amp; get exclusive deals right from your phone.
-          </small>
-        </li>
-      {{/if}}
       <li>
         <a>
           {{glyph-icon set='aeo' type='locator'}}
@@ -115,9 +106,9 @@
       </li>
     </ul>
   </div>
-  <div class="links links3 row col-xs-12 col-sm-6 col-md-4">
-    {{glyph-icon set='aeo' type='question' class='col-xs-1'}}
-    <ul class="links-contact-us col-xs-11 col-sm-10">
+  <div class="links links3 col-xs-12 col-sm-6 col-md-4">
+    {{glyph-icon set='aeo' type='question' class='pull-left'}}
+    <ul class="links-contact-us col-xs-10 col-sm-11">
       <li>
         <a>
           Have a Question?
@@ -144,8 +135,10 @@
         </a>
       </li>
     </ul>
+
+    <div class="clearfix"></div>
     <div class="row">
-      <div class="social-media col-xs-7 col-md-8 col-lg-7">
+      <div class="social-media row col-xs-11 col-sm-8 col-md-8 col-lg-7">
         <h4 class="col-xs-12">Follow Us</h4>
         <a class="col-xs-2">
           {{glyph-icon set='aeo' type='facebook'}}
@@ -172,10 +165,13 @@
           #AERIEREAL
         </a>
       </div>
-      <div class="col-xs-5 col-md-4 col-lg-5"></div>
+      <div class="col-xs-1 col-sm-4 col-md-4 col-lg-5"></div>
     </div>
+
   </div>
   <div class="copyright row col-xs-12">
     &copy; 2014 AEO Management Co. All Rights Reserved.
+  </div>
+
   </div>
 </footer>
