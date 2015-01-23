@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleFor('view:layout-button', 'LayoutButtonView');
+moduleFor('view:utilities/window-controls', 'WindowControlsView');
 
 // Replace this with your real tests.
 test('it exists', function() {

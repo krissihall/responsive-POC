@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.View.extend({
 
-  templateName: 'layout-button',
+  templateName: 'utilities/layout-button',
   tagName: 'button',
   classNames: ['btn', 'btn-xs', 'col-xs-6'],
   classNameBindings: ['isActive:btn-default:btn-drop'],

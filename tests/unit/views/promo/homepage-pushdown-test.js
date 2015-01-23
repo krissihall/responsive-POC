@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleFor('view:window-controls', 'WindowControlsView');
+moduleFor('view:promo/homepage-pushdown', 'PromoHomepagePushdownView');
 
 // Replace this with your real tests.
 test('it exists', function() {

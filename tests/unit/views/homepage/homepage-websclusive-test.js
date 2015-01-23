@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleFor('view:bag-overview', 'BagOverviewView');
+moduleFor('view:homepage/homepage-websclusive', 'HomepageHomepageWebsclusiveView');
 
 // Replace this with your real tests.
 test('it exists', function() {

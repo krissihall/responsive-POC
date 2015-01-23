@@ -2,6 +2,6 @@ import Ember from 'ember';
 
 export default Ember.View.extend({
 
-  templateName: 'homepage-feature'
+  templateName: 'cart/bag-overview'
   
 });

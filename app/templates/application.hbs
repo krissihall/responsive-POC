@@ -1,6 +1,6 @@
-<div {{bind-attr class="isFluidLayout:container-fluid:container"}}>
-  {{partial 'header'}}
+<div class="application-wrapper">
+  {{partial 'header/header'}}
   {{outlet}}
-  {{partial 'footer'}}
+  {{partial 'footer/footer'}}
 </div>
-{{view 'window-controls'}}
+{{view 'utilities/window-controls'}}

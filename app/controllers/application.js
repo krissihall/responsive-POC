@@ -22,14 +22,8 @@ export default Ember.Controller.extend({
 
   isNavigationOpen: false,
   isBagOpen: false,
-
-  isFluidLayout: function(){
-    return true;
-  }.property(),
-
-  isLayoutChanged: function(){
-    return false;
-  }.property(),
+  isFluidLayout: false,
+  isLayoutChanged: false,
 
   windowWidth: function(){
     return window.innerWidth;

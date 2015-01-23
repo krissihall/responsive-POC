@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleFor('view:homepage-feature', 'HomepageFeatureView');
+moduleFor('view:homepage/homepage-feature', 'HomepageFeatureView');
 
 // Replace this with your real tests.
 test('it exists', function() {
