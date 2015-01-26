@@ -1,9 +1,9 @@
-<a class="header-hamburger visible-xs-block hidden-sm" 
+<a class="header-hamburger visible-xs-block visible-sm-block" 
     {{action 'isNavigationOpenSlideUp' 'isNavigationOpen'}}>
   {{glyph-icon set='aeo' type='mdot-hamburger'}}
 </a>
 
-<div class="hidden-xs visible-sm-block visible-md-block visible-lg-block">
+<div class="hidden-xs hidden-sm visible-md-block visible-lg-block">
   {{partial 'header/navigation-links'}}
 </div>
 
@@ -11,5 +11,8 @@
   <a {{action 'isNavigationOpenSlideDown' 'isNavigationOpen'}} {{bind-attr class="isNavigationOpen:show:hide :header-hamburger-open"}}>
     {{glyph-icon set='aeo' type='mdot-hamburger'}}
   </a>
-  {{partial 'header/navigation-links'}}
+  <div class="header-navigation-hamburger">
+    {{partial 'header/navigation-links'}}
+    {{partial 'header/header-auxiliary-nav'}}
+  </div>
 {{/slide-in}}

@@ -1,33 +1,34 @@
 <header {{bind-attr class="isFluidLayout:container-fluid:container"}}>
 
-  <div class="header-tag-promo-container col-sm-12 container-sm-height">
-    <div class="row-sm-height">
+  <div class="header-tag-promo-container col-md-12 container-md-height">
+    <div class="row-md-height">
       {{! col-1-header: text promo callout }}
       {{view 'header/header-tag'}}
 
       {{! col-2-header: auxiliary nav links }}
-      <div class="header-auxiliary-nav hidden-xs col-sm-6 col-sm-height col-middle text-center">
+      <div class="header-auxiliary-nav hidden-xs hidden-sm col-md-7 col-md-height col-middle text-center">
         {{partial 'header/header-auxiliary-nav'}}
       </div>
 
       {{! col-3-header: search bar }}
-      <div class="header-search hidden-xs col-sm-3 col-sm-height col-middle text-right">
+      <div class="header-search hidden-xs hidden-sm col-md-height col-md-5 col-middle text-right">
         {{partial 'header/search'}}
       </div>
 
     </div>
   </div>
 
-  <div class="container-sm-height clearfix">
-    <div class="clearfix row row-sm-height">
+  <div class="container-md-height clearfix">
+    <div class="clearfix row row-md-height">
       {{glyph-icon type='aeo' set='aeo' 
-          class='ae-logo hidden-xs col-sm-2 clickable col-sm-height'}}
-      <nav class='header-navigation col-xs-2 col-sm-10 col-sm-height'>
+          class='ae-logo hidden-xs hidden-sm visible-md visible-lg col-md-2 col-md-height clickable'}}
+      <nav class='header-navigation col-xs-3 col-sm-2 col-md-10 col-md-height clearfix'>
         {{partial 'header/navigation'}}
       </nav>
       {{glyph-icon type='aeo-eagle' set='aeo' 
-          class='visible-xs-block hidden-sm col-xs-8 clickable'}}
-      <a class="bag-count-icon visible-xs-inline-block hidden-sm col-xs-2"
+          class='visible-xs-block visible-sm-block col-xs-6 col-sm-8 clickable'}}
+      <a class="bag-count-icon visible-xs-inline-block visible-sm-inline-block 
+                hidden-md col-xs-3 col-sm-2"
           {{action 'isBagOpenSlideUp' 'isBagOpen'}}>
         {{glyph-icon type='mdot-bag' set='aeo'}}
         <span class="bag-icon-count">4</span>
@@ -38,7 +39,7 @@
 </header>
 
 {{#slide-in over=isBagOpen id="slide-in-xs-bag-open" dir="left" slideIn90=true disableBodyScroll=true}}
-  <a {{bind-attr class=':bag-count-icon :hidden-sm 
+  <a {{bind-attr class=':bag-count-icon :hidden-md 
       isBagOpen:show:hide'}}
       {{action 'isBagOpenSlideDown' 'isBagOpen'}}>
     {{glyph-icon type='mdot-bag' set='aeo'}}

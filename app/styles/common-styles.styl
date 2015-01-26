@@ -1,6 +1,11 @@
 html, body
   -webkit-font-smoothing antialiased
-  
+
+.disableScroll
+  overflow hidden
+  position fixed /* Necessary for iOS devices */
+  width 100% /* Necessary to keep body tag in viewport on desktop */
+
 a
   cursor pointer
 

@@ -43,23 +43,27 @@ export default Ember.Controller.extend({
   }.on('init'),
 
   isBreakPointNameChanged: function(){
-    var windowWidth = this.get('windowWidth');
     this.resetAllSizes();
+    this._setBreakPointName();
+  }.observes('windowWidth'),
 
-    if(windowWidth <= this.get('xtrSmallBreak')){
+  _setBreakPointName: function(){
+    var windowWidth = window.innerWidth;
+
+    if(windowWidth < (this.get('smallBreak') - 1)){
       this.set('breakPointName', 'Xtr-Small');
       this.set('isXtrSmall', true);
-    } else if(windowWidth > this.get('xtrSmallBreak') && windowWidth <= this.get('smallBreak')){
+    } else if(windowWidth > this.get('xtrSmallBreak') && windowWidth < (this.get('mediumBreak') - 1)){
       this.set('breakPointName', 'Small');
       this.set('isSmall', true);
-    } else if(windowWidth > this.get('smallBreak') && windowWidth <= this.get('mediumBreak')){
+    } else if(windowWidth > this.get('mediumBreak') && windowWidth < (this.get('largeBreak') - 1)){
       this.set('breakPointName', 'Medium');
       this.set('isMedium', true);
-    } else if(windowWidth > this.get('mediumBreak')){
+    } else if(windowWidth >= this.get('largeBreak')){
       this.set('breakPointName', 'Large');
       this.set('isLarge', true);
     }
-  }.observes('windowWidth'),
+  },
 
   resetAllSizes: function(){
     this.set('isXtrSmall', false);

@@ -2,10 +2,11 @@ header
   position relative
   border-bottom 1px solid $gray-disabled
   .header-promo-tag
+    padding-right 0
     p
       margin 0
       font-size-to-em(14)
-      @media screen and (max-width: $screen-sm)
+      @media screen and (max-width: $screen-sm-max)
         text-align center
         font-size-to-em(18)
   .ae-logo
@@ -16,6 +17,7 @@ header
       padding-left $padding-large-horizontal
   .aeoicon-aeo-eagle
     font-size-to-em(60)
+    color $brand-primary
   .aeoicon-aeo-eagle
     text-align center
     padding $padding-base-vertical 0
@@ -45,10 +47,21 @@ header
     vertical-align bottom
     height 100%
     font-size-to-em(20)
+  .header-navigation-hamburger
+    position relative
+    z-index 2
+    .nav > li > a
+      text-align left !important
+      padding $padding-small-vertical $padding-small-horizontal
+    .header-auxiliary-nav-links
+      .nav > li > a
+        padding $padding-small-vertical $padding-small-horizontal
+        text-align left !important
+      .nav-sm
+        font-size-to-em(15)
   .header-auxiliary-nav
     font-size-to-em(15)
-    .nav > li > a
-      padding $padding-small-vertical $padding-small-horizontal
+    padding 0
   .header-search
     padding $padding-base-vertical 0
     text-align left
@@ -56,7 +69,9 @@ header
       width auto
       display inline-block
       .header-search-input
-        margin 0 
+        margin 0
+        width auto
+        max-width 135px
         height auto
         label
           background none
