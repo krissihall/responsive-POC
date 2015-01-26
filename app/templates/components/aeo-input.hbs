@@ -1,0 +1,67 @@
+{{!--
+templates/components/aeo-input.hbs
+
+Template for "aeo-input" component, with floating labels and error messages.
+--}}
+
+{{input class="form-control"
+  placeholder=computedLabel
+  value=value
+  disabled=isDisabled
+  maxlength=maxlength
+  readonly=readonly
+  size=size
+  name=name
+  pattern=pattern
+  height=height
+  width=width
+  step=step
+  selectionDirection=selectionDirection
+  required=required
+  tabindex=tabindex
+  min=min
+  max=max
+  accept=accept
+  formmethod=formmethod
+  formaction=formaction
+  formnovalidate=formnovalidate
+  formenctype=formentype
+  formtarget=formtarget
+  inputmode=inputmode
+  spellcheck=spellcheck
+  autosave=autosave
+  autofocus=autofocus
+  autocomplete=autocomplete
+  multiple=multiple
+  form=form
+  type=(unbound type)
+}}
+{{!-- NOTE: type=(unbound type) outputs the property (e.g. "password") without binding. The property will not change. Docs: http://emberjs.com/api/classes/Ember.Handlebars.helpers.html#method_unbound--}}
+
+{{#if disclaimer}}
+  <small><em>{{disclaimer}}</em></small>
+{{/if}}
+
+{{#if icon}}
+  <div class="absolute-icon">
+    {{#if iconSet}}
+      {{glyph-icon type=icon set=iconSet}}
+    {{else}}
+      {{glyph-icon type=icon}}
+    {{/if}}
+  </div>
+{{/if}}
+
+{{! Label, which will be floated. This comes from the "label" parameter. }}
+<label class="aeo-input-label clickable" {{bind-attr for=inputId}}>
+  {{computedLabel}}
+</label>
+
+{{#if error}}
+  {{glyph-icon set="aeo" type="mdot-attention" class="form-control-feedback"}}
+
+  {{! Error field. This is driven by 'error' parameter. }}
+  <div class="aeo-input-error">
+    {{error.message}}
+  </div>
+{{/if}}

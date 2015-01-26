@@ -8,7 +8,7 @@
 </div>
 
 {{#slide-in over=isNavigationOpen id="slide-in-xs-nav" dir="right" slideIn90=true disableBodyScroll=true}}
-  <a {{action 'isNavigationOpenSlideDown' 'isNavigationOpen'}} {{bind-attr class="isNavigationOpen:show:hide"}}>
+  <a {{action 'isNavigationOpenSlideDown' 'isNavigationOpen'}} {{bind-attr class="isNavigationOpen:show:hide :header-hamburger-open"}}>
     {{glyph-icon set='aeo' type='mdot-hamburger'}}
   </a>
   {{partial 'header/navigation-links'}}

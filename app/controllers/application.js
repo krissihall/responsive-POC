@@ -87,6 +87,12 @@ export default Ember.Controller.extend({
 
   actions: {
 
+    clearFieldError: function(){
+      /**
+       * Clear input error messages here
+       */
+    },
+
     /**
      * Method to invoke slide up animation.
      * Based on component slideup,
