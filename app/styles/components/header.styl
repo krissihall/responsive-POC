@@ -51,16 +51,27 @@ header
     z-index 2
     .nav > li > a
       text-align left !important
-      padding $padding-small-vertical $padding-small-horizontal
     .header-auxiliary-nav-links
       .nav > li > a
         padding $padding-small-vertical $padding-small-horizontal
         text-align left !important
+        background $gray-lightest
+        &:hover
+          background darken($gray-lightest, 5%)
       .nav-sm
         font-size-to-em(15)
+    .header-search-form
+      display block
+      width 100%
+      padding $padding-base-vertical $padding-base-horizontal
+      .aeo-input
+        height auto
+        margin 0
   .header-auxiliary-nav
     font-size-to-em(15)
     padding 0
+    .nav > li > a
+      padding $padding-small-vertical $padding-small-horizontal
   .header-search
     padding $padding-base-vertical 0
     text-align left
@@ -75,11 +86,13 @@ header
         label
           background none
         input
-          max-width 300px
+          max-width 135px
           width auto
         .form-control
           margin 0
           height auto
+          &.not-empty
+            height auto
       .header-search-button
         height auto
         margin 0

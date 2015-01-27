@@ -25,6 +25,22 @@ export default Ember.Controller.extend({
   isFluidLayout: false,
   isLayoutChanged: false,
 
+  isDesktopStyles: function(){
+    if(this.get('isMedium') || this.get('isLarge')) {
+      return true;
+    } else {
+      return false;
+    }
+  }.property('isMedium', 'isLarge'),
+
+  isMobileStyles: function(){
+    if(this.get('isXtrSmall') || this.get('isSmall')){
+      return true;
+    } else {
+      return false;
+    }
+  }.property('isXtrSmall', 'isSmall'),
+
   windowWidth: function(){
     return window.innerWidth;
   }.property(),

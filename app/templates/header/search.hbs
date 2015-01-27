@@ -1,5 +1,10 @@
 <form class="header-search-form pull-right clearfix">
-  {{aeo-input label="Search" class="header-search-input input-sm pull-left"}}
+  {{#if isDesktopStyles}}
+    {{aeo-input label="Search" class="header-search-input input-sm pull-left"}}
+  {{/if}}
+  {{#if isMobileStyles}}
+    {{aeo-input label="Search" class="header-search-input"}}
+  {{/if}}
   <button class="header-search-button btn-link pull-left">
     {{glyph-icon set='aeo' type='Search'}}
   </button>
