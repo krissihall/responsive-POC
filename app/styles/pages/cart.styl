@@ -1,0 +1,68 @@
+.cart-container
+  .cart-subtotal-shipping-header
+    background $gray-lightest
+    border-top 1px solid $gray-disabled
+    border-bottom 1px solid $gray-disabled
+    width 100%
+    margin-bottom $padding-base-vertical
+    .col-xs-height
+      padding-top $padding-base-horizontal
+      padding-bottom $padding-base-horizontal
+      color $gray-light
+    .cart-subtotal
+      font-size-to-em(30)
+    .cart-shipping-message
+      font-size-to-em(24)
+        
+  .cart-items
+    .cart-item-container
+      .cart-item
+        margin 0 0 $padding-base-vertical 0
+        .cart-item-display
+          .cart-item-image
+            padding 0
+          .cart-item-details
+            background $gray-lightest
+            padding $padding-base-vertical $padding-base-horizontal
+            position relative
+            .cart-item-name
+              font-size-to-em(26)
+              margin-bottom $padding-base-horizontal
+            .cart-item-amount
+              text-align right
+              &.fixed-to-bottom
+                position absolute
+                bottom $padding-base-vertical
+                right $padding-base-horizontal
+              .price-slashed
+                color $gray-lighter
+              .item-price
+                font-size-to-em(30)
+        .cart-item-update-action
+          padding $padding-base-vertical $padding-base-horizontal
+
+  .discount-code-form-wrapper
+    .discount-code-link
+      cursor pointer
+      padding $padding-base-vertical $padding-base-horizontal
+    .discount-code-input
+      margin $padding-base-vertical 0
+      .form-group
+        margin-bottom 0
+        height auto
+  
+  .merchandise-details
+    margin-bottom 0
+    .cart-details
+      width 100%
+      .summary-label,
+      .summary-value
+        font-size-to-em(26)
+        color $gray-light
+        padding $padding-base-vertical $padding-base-horizontal
+      .cart-subtotal
+        font-size-to-em(30)
+        
+  .cart-gift-options
+    .cart-gift-options-link
+      padding $padding-base-vertical $padding-base-horizontal

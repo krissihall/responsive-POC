@@ -25,6 +25,8 @@ export default Ember.Controller.extend({
   isFluidLayout: false,
   isLayoutChanged: false,
 
+  isDiscountFormVisible: false,
+
   isDesktopStyles: function(){
     if(this.get('isMedium') || this.get('isLarge')) {
       return true;
@@ -106,6 +108,24 @@ export default Ember.Controller.extend({
   },
 
   actions: {
+
+    /**
+     * Method to invoke slide up animation.
+     * Based on component slideup,
+     * @method slideUp
+     */
+    isPromoPushDownOpenSlideUp: function() {
+      this.set('isPromoPushDownOpen', false);
+    },
+
+    /**
+     * Method to invoke slide up animation.
+     * Based on component slideDown,
+     * @method slideDown
+     */
+    isPromoPushDownOpenSlideDown: function() {
+      this.set('isPromoPushDownOpen', true);
+    },
 
     clearFieldError: function(){
       /**

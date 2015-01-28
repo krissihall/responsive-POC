@@ -1,0 +1,271 @@
+<div {{bind-attr class="isFluidLayout:container-fluid:container :cart-container"}}>
+  <div class="cart-header col-xs-12">
+    <h1 class="text-center">My Bag <small>(4)</small></h1>
+  </div>
+
+  <div class="cart-subtotal-shipping-header container-xs-height">
+    <div class="cart-subtotal col-xs-height col-middle col-xs-6">
+      Subtotal: {{currency-display value="$101.96" class="text-bold" decimal=true}}
+    </div>
+    <div class="cart-shipping-message col-xs-height col-middle col-xs-6 text-center">
+      It's On Us... You Get Free US Shipping!
+    </div>
+  </div>
+
+  <div class="cart-items col-md-7 col-lg-7">
+
+    <div class="cart-item-container">
+      <div class="cart-item">
+        <div class="cart-item-display container-sm-height">
+          <div class="cart-item-image col-sm-height col-top col-sm-7">
+            {{product-image image="http://pics.ae.com/is/image/aeo/0302_1968_166_f" width=600 ratio="13:15" quality="100,0" class="img-responsive"}}
+          </div>{{! cart-item-image }}
+
+          <div class="cart-item-details col-sm-height col-top col-sm-5">
+            <div class="cart-item-name text-bold">AEO Boyfriend Tank</div>
+            <div class="cart-item-size">M</div>
+            <div class="cart-item-color">Neon Runner Pink</div>
+            <div class="cart-item-quantity">Qty 1</div>
+            <div {{bind-attr class="isDesktopStyles:fixed-to-bottom isSmall:fixed-to-bottom :cart-item-amount"}}>
+              {{#price-slasher}}
+                <span class="lite-font">{{currency-display value="$12.95"}}</span>
+              {{/price-slasher}}
+              <span class="item-price text-bold">{{currency-display value="$9.99"}}</span> {{! itemSalePrice }}
+            </div>
+          </div>{{! cart-item-details }}
+        </div>{{! cart-item-display }}
+        
+        <div class="cart-item-update-container hide">
+          <div class="cart-item-update-action row clearfix">
+            <div class="cart-item-product-details col-xs-6 clickable">
+              {{glyph-icon set='aeo' type='info'}} View product details
+            </div>
+            <div class="cart-item-remove-button clickable">
+              {{glyph-icon set='aeo' type='mdot-close'}} Remove from bag
+            </div>
+          </div>{{! cart-item-update-action }}
+
+          <div class="cart-item-update-details">
+            <div class="cart-item-change-details row clearfix">
+              <div class="cart-item-details-size col-xs-6">
+                {{aeo-select label="Size"
+                  content=prodTwoSizes 
+                  selection="Medium"
+                  class="item-size-select"}}
+              </div>
+              <div class="cart-item-details-quantity col-xs-6">
+                {{aeo-select label="Qty"
+                    content=quantityList 
+                    selection="1"
+                    class="item-qty-select"}}
+              </div>
+              <div class="cart-item-details-color col-xs-12">
+                {{aeo-select label="Colors"
+                    content=tankColors 
+                    selection="Neon Runner Pink"
+                    class="item-qty-select"}}
+              </div>
+            </div>{{! cart-item-change-details }}
+
+            <div class="button-wrapper clearfix">
+              <button type="button" class="update-item-cancel-button btn btn-link btn-cancel col-xs-4">Cancel</button>
+              <button type="button" class="update-item-save-button btn btn-default col-xs-8">Save</button>
+            </div>{{! button-wrapper }}
+          </div>{{! cart-item-update-details }}
+        </div>{{! cart-item-update-container }}
+
+      </div>{{! cart-item }}
+    </div>{{! cart-item-container }}
+
+    <div class="cart-item-container">
+      <div class="cart-item">
+        <div class="cart-item-display container-sm-height">
+          <div class="cart-item-image col-sm-height col-top col-sm-7">
+            {{product-image image="https://aeo-o.scene7.com/is/image/aeo/0112_3166_841_f" width=600 ratio="13:15" quality="100,0" class="img-responsive"}}
+          </div>{{! cart-item-image }}
+
+          <div class="cart-item-details col-sm-height col-top col-sm-5">
+            <div class="cart-item-name text-bold">Relaxed Straight Jeans</div>
+            <div class="cart-item-size">28 X 30</div>
+            <div class="cart-item-color">Authentic Light</div>
+            <div class="cart-item-quantity">Qty 1</div>
+            <div class="cart-item-amount">
+              {{! price-slasher component with itemListPrice }}
+              <span class="item-price text-bold">{{currency-display value="$39.99"}}</span> {{! itemSalePrice }}
+            </div>
+          </div>{{! cart-item-details }}
+        </div>{{! cart-item-display }}
+        
+        <div class="cart-item-update-container hide">
+          <div class="cart-item-update-action row clearfix">
+            <div class="cart-item-product-details col-xs-6">
+              {{glyph-icon set='aeo' type='info'}} View product details
+            </div>
+            <div class="cart-item-remove-button">
+              {{glyph-icon set='aeo' type='mdot-close'}} Remove from bag
+            </div>
+          </div>{{! cart-item-update-action }}
+
+          <div class="cart-item-update-details">
+
+            <div class="cart-item-change-details clearfix row">
+              <div class="cart-item-details-size col-xs-6">
+                {{aeo-select label="Size"
+                    content=prodOneSizes 
+                    selection="28 X 30"
+                    class="item-size-select"}}
+              </div>
+              <div class="cart-item-details-quantity col-xs-6">
+                {{aeo-select label="Qty"
+                    content=quantityList 
+                    selection="1"
+                    class="item-qty-select"}}
+              </div>
+            </div>{{! cart-item-update-details }}
+
+            <div class="button-wrapper clearfix">
+              <button type="button" class="update-item-cancel-button btn btn-link btn-cancel col-xs-4">Cancel</button>
+              <button type="button" class="update-item-save-button btn btn-default col-xs-8">Save</button>
+            </div>{{! button-wrapper }}
+          </div>{{! cart-item-update-details }}
+      </div>{{! cart-item-update-container }}
+
+      </div>{{! cart-item }}
+    </div>{{! cart-item-container }}
+
+    <div class="cart-item-container">
+      <div class="cart-item">
+        <div class="cart-item-display container-sm-height">
+          <div class="cart-item-image col-sm-height col-top col-sm-7">
+            {{product-image image="https://aeo-o.scene7.com/is/image/aeo/0220_4902_100_f" width=600 ratio="13:15" quality="100,0" class="img-responsive"}}
+          </div>{{! cart-item-image }}
+
+          <div class="cart-item-details col-sm-height col-top col-sm-7">
+            <div class="cart-item-name text-bold">AE Leopard Print Boxer</div>
+            <div class="cart-item-size">L</div>
+            <div class="cart-item-color">White</div>
+            <div class="cart-item-quantity">Qty 1</div>
+            <div class="cart-item-amount">
+              {{! price-slasher component with itemListPrice }}
+              <span class="item-price text-bold">{{currency-display value="$9.99"}}</span> {{! itemSalePrice }}
+            </div>
+          </div>{{! cart-item-details }}
+        </div>{{! cart-item-display }}
+        
+        
+        <div class="cart-item-update-container hide">
+          <div class="cart-item-update-action row clearfix">
+            <div class="cart-item-product-details col-xs-6">
+              {{glyph-icon set='aeo' type='info'}} View product details
+            </div>
+            <div class="cart-item-remove-button">
+              {{glyph-icon set='aeo' type='mdot-close'}} Remove from bag
+            </div>
+          </div>{{! cart-item-update-action }}
+
+          <div class="cart-item-update-details row clearfix">
+            <div class="cart-item-change-details clearfix">
+              <div class="cart-item-details-size col-xs-6">
+                {{aeo-select label="Size"
+                    content=prodTwoSizes 
+                    selection="Large"
+                    class="item-size-select"}}
+              </div>
+              <div class="cart-item-details-quantity col-xs-6">
+                {{aeo-select label="Qty"
+                    content=quantityList 
+                    selection="1"
+                    class="item-qty-select"}}
+              </div>
+            </div>{{! cart-item-change-details }}
+
+            <div class="button-wrapper clearfix">
+              <button type="button" class="update-item-cancel-button btn btn-link btn-cancel col-xs-4">Cancel</button>
+              <button type="button" class="update-item-save-button btn btn-default col-xs-8">Save</button>
+            </div>{{! button-wrapper }}
+          </div>{{! cart-item-update-details }}
+        </div>{{! cart-item-update-container }}
+      </div>{{! cart-item}}
+    </div>{{! cart-item-container }}
+
+    <div class="cart-item-container">
+      <div class="cart-item">
+
+        <div class="cart-item-display container-sm-height">
+          <div class="cart-item-image col-sm-height col-top col-sm-7">
+            {{product-image image="https://aeo-o.scene7.com/is/image/aeo/1333_3851_508_f" width=600 ratio="13:15" quality="100,0" class="img-responsive"}}
+          </div>{{! cart-item-image }}
+
+          <div class="cart-item-details col-sm-height col-top col-sm-5">
+            <div class="cart-item-name text-bold">AEO Hi-Rise Festival Shortie</div>
+            <div class="cart-item-size">6</div>
+            <div class="cart-item-color">Light Destroy Wash</div>
+            <div class="cart-item-quantity">Qty 1</div>
+            <div class="cart-item-amount">
+              {{! price-slasher component with itemListPrice }}
+              <span class="item-price text-bold">{{currency-display value="$34.99"}}</span> {{! itemSalePrice }}
+            </div>
+          </div>{{! cart-item-details }}
+        </div>{{! cart-item-display }}
+        
+        <div class="cart-item-update-container hide">
+          <div class="cart-item-update-action row clearfix">
+            <div class="cart-item-product-details col-xs-6">
+              {{glyph-icon set='aeo' type='info'}} View product details
+            </div>
+            <div class="cart-item-remove-button">
+              {{glyph-icon set='aeo' type='mdot-close'}} Remove from bag
+            </div>
+          </div>{{! cart-item-update-action }}
+
+          <div class="cart-item-update-details">
+            <div class="cart-item-change-details row clearfix">
+              <div class="cart-item-details-size col-xs-6">
+                {{aeo-select label="Size"
+                  content=prodFourSizes 
+                  selection="6"
+                  class="item-size-select"}}
+              </div>
+              <div class="cart-item-details-quantity col-xs-6">
+                {{aeo-select label="Qty"
+                    content=quantityList 
+                    selection="1"
+                    class="item-qty-select"}}
+              </div>
+              <div class="cart-item-details-color col-xs-12">
+                {{aeo-select label="Colors"
+                    content=shortsColors 
+                    selection="Light Destroy Wash"
+                    class="item-qty-select"}}
+              </div>
+            </div>{{! cart-item-change-details }}
+
+            <div class="button-wrapper clearfix">
+              <button type="button" class="update-item-cancel-button btn btn-link btn-cancel col-xs-4">Cancel</button>
+              <button type="button" class="update-item-save-button btn btn-default col-xs-8">Save</button>
+            </div>{{! button-wrapper }}
+
+          </div>{{! cart-item-update-details }}
+        </div>{{! cart-item-update-container }}
+      </div>{{! cart-item }}
+
+    </div>{{! cart-item-container }}
+  </div>{{! cart-items }}
+
+  <div class="col-md-5 col-lg-5">
+    {{view 'cart/discount-code'}}
+
+    {{partial 'cart/summary'}}
+
+    <div class="cart-gift-options">
+      <div class="cart-gift-options-link clickable">
+        {{glyph-icon set='aeo' type='gift'}} Gift Options
+      </div>
+    </div>
+
+    <div class="cart-checkout">
+      <button class="cart-checkout-button btn btn-success btn-block">Checkout</button>
+    </div>
+  </div>
+
+</div>

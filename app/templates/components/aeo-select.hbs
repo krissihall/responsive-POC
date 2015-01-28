@@ -1,0 +1,22 @@
+{{!--
+templates/components/aeo-select.hbs
+
+Template for "aeo-select" component, with floating labels and error messages.
+--}}
+
+{{! Label, which will be floated. This comes from the "label" parameter. }}
+<label class="clickable" {{bind-attr for=selectId}}>
+  {{label}}
+</label>
+
+{{view "select" content=content selection=selection class="form-control"}} 
+<span class="caret clickable"></span>
+
+{{#if error}}
+  {{glyph-icon set="aeo" type="mdot-attention" class="form-control-feedback"}}
+
+  {{! Error field. This is driven by 'error' parameter. }}
+  <div class="aeo-input-error">
+    {{error.message}}
+  </div>
+{{/if}}

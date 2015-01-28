@@ -1,0 +1,16 @@
+<div class="discount-code-form-wrapper">
+  <div {{bind-attr class="isDiscountFormVisible:hide:show :discount-code-link"}} 
+      {{action 'showDiscountCodeForm'}}>
+    {{glyph-icon set='aeo' type='mdot-dollar'}} Have a discount code?
+  </div>
+  <div {{bind-attr class="isDiscountFormVisible:show:hide :discount-code-input :container-xs-height :row"}}>
+    <form class="discount-code-form row-xs-height">
+      <div class="discount-code-field col-xs-9 col-xs-height col-middle">
+        {{aeo-input label='Discount Code'}}
+      </div>
+      <div class="discount-code-button col-xs-3 col-xs-height col-middle">
+        <button type="submit" class="btn btn-default btn-block">Apply</button>
+      </div>
+    </form>
+  </div>
+</div>

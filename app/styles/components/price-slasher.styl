@@ -1,0 +1,17 @@
+/*
+  * components/price-slasher.styl
+  * Style for price-slasher
+*/
+  
+.price-slasher
+  position relative
+  display inline-block
+  &::before
+    border-bottom 1px solid #747474
+    -webkit-transform skewY(-10deg)
+    transform skewY(-10deg)
+    content ''
+    width 100%
+    position absolute
+    right 0
+    top 50%
