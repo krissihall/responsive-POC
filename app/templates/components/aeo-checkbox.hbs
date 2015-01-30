@@ -1,0 +1,55 @@
+{{!--
+templates/components/aeo-checkbox.hbs
+
+Template for "aeo-checkbox" component, with floating labels and error messages.
+--}}
+
+{{input class="form-control"
+  placeholder=computedLabel
+  checked=checked
+  disabled=disabled
+  maxlength=maxlength
+  readonly=readonly
+  size=size
+  name=name
+  pattern=pattern
+  height=height
+  width=width
+  step=step
+  selectionDirection=selectionDirection
+  required=required
+  tabindex=tabindex
+  min=min
+  max=max
+  accept=accept
+  formmethod=formmethod
+  formaction=formaction
+  formnovalidate=formnovalidate
+  formenctype=formentype
+  formtarget=formtarget
+  inputmode=inputmode
+  spellcheck=spellcheck
+  autosave=autosave
+  autofocus=autofocus
+  autocomplete=autocomplete
+  multiple=multiple
+  form=form
+  type="checkbox"
+}}
+
+{{#if stackLabel}}
+  <label class="aeo-stack-label clickable" {{bind-attr for=checkboxId}}>
+    <span class="label-text">
+      <span class="label-subText">{{label}}</span>
+      {{#if currency}}
+        {{currency-display value=secondaryText}}
+      {{else}}
+        {{secondaryText}}
+      {{/if}}
+    </span>
+  </label>
+{{else}}
+  <label class="aeo-checkbox-label clickable" {{bind-attr for=checkboxId}}>
+    {{label}}
+  </label>
+{{/if}}

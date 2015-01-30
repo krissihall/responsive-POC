@@ -1,0 +1,30 @@
+<div {{bind-attr class="isFluidLayout:container-fluid:container :checkout-container"}}>
+  <header class="checkout-header col-xs-12 container-xs-height">
+    {{glyph-icon set='aeo' type='aeo-eagle' class='col-xs-height col-middle col-xs-1'}}
+
+    <h1 class="col-xs-height col-middle col-xs-8">Checkout</h1>
+
+    <div class="checkout-header-bag-icon col-xs-height col-xs-3">
+      <a class="bag-count-icon"
+          {{action 'isBagOpenSlideUp' 'isBagOpen'}}>
+        {{glyph-icon type='mdot-bag' set='aeo'}}
+        <span class="bag-icon-count">4</span>
+      </a>
+    </div>
+  </header>
+</div>
+
+{{#slide-in over=isBagOpen id="slide-in-xs-bag-open" dir="left" slideIn90=true disableBodyScroll=true}}
+  <a {{bind-attr class=':bag-count-icon 
+      isBagOpen:show:hide'}}
+      {{action 'isBagOpenSlideDown' 'isBagOpen'}}>
+    {{glyph-icon type='mdot-bag' set='aeo'}}
+    <span class="bag-icon-count">4</span>
+  </a>
+  {{view 'cart/bag-overview'}}
+{{/slide-in}}
+
+{{#if isBagOpen}}
+  <div class="navigation-open-bg" 
+      {{action 'isBagOpenSlideDown' 'isBagOpen'}}></div>
+{{/if}}

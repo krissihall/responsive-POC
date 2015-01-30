@@ -10,6 +10,8 @@ Router.map(function() {
     path: "/"
   });
   this.route("cart");
+
+  this.route("checkout");
 });
 
 export default Router;

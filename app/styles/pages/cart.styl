@@ -41,28 +41,29 @@
         .cart-item-update-action
           padding $padding-base-vertical $padding-base-horizontal
 
-  .discount-code-form-wrapper
-    .discount-code-link
-      cursor pointer
+//** made global for use in 'Checkout' page as well
+.discount-code-form-wrapper
+  .discount-code-link
+    cursor pointer
+    padding $padding-base-vertical $padding-base-horizontal
+  .discount-code-input
+    margin $padding-base-vertical 0
+    .form-group
+      margin-bottom 0
+      height auto
+
+.merchandise-details
+  margin-bottom 0
+  .cart-details
+    width 100%
+    .summary-label,
+    .summary-value
+      font-size-to-em(26)
+      color $gray-light
       padding $padding-base-vertical $padding-base-horizontal
-    .discount-code-input
-      margin $padding-base-vertical 0
-      .form-group
-        margin-bottom 0
-        height auto
-  
-  .merchandise-details
-    margin-bottom 0
-    .cart-details
-      width 100%
-      .summary-label,
-      .summary-value
-        font-size-to-em(26)
-        color $gray-light
-        padding $padding-base-vertical $padding-base-horizontal
-      .cart-subtotal
-        font-size-to-em(30)
-        
-  .cart-gift-options
-    .cart-gift-options-link
-      padding $padding-base-vertical $padding-base-horizontal
+    .cart-subtotal
+      font-size-to-em(30)
+      
+.cart-gift-options
+  .cart-gift-options-link
+    padding $padding-base-vertical $padding-base-horizontal

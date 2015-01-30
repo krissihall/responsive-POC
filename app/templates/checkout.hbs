@@ -1,0 +1,58 @@
+<div {{bind-attr class="isFluidLayout:container-fluid:container :checkout-container :clearfix"}}>
+
+  <div class="col-xs-12 col-md-8 col-lg-8">
+    <h2 class="section">Where should the receipt go?</h2>
+    <div class="bg-gray padded-container">
+      {{aeo-input label='Email'}}
+    </div>
+
+    <h2 class="section">How do you want to pay?</h2>
+    <div class="bg-gray padded-container">
+      <button class="btn btn-drop btn-block">Pay with <img src="paypal.svg" alt="Paypal" class="paypal-logo" /></button>
+      <button class="btn btn-drop btn-block">Use a Gift Card</button>
+
+      <h3>Credit Card</h3>
+      {{aeo-input label='Credit Card Number'}}
+      {{aeo-input label='Expiration Date (MM/YYYY)'}}
+      {{aeo-input label='Name on Card'}}
+      <div class="container-xs-height row">
+        {{aeo-input label='Security Code' class='col-xs-height col-middle col-xs-7'}}
+        <div class="security-code-message col-xs-height col-middle col-xs-5">
+          Where is my security code?
+        </div>
+      </div>
+
+      <h3>Billing Address</h3>
+      {{aeo-input label='First Name'}}
+      {{aeo-input label='Last Name'}}
+      {{aeo-input label='Street Address'}}
+      {{aeo-input label='Zip Code'}}
+      {{aeo-input label='City'}}
+      {{aeo-input label='State'}}
+      {{aeo-input label='Country'}}
+      {{aeo-input label='Billing Phone Number' disclaimer='in case there\'s a billing issue'}}
+    </div>
+
+    <h2 class="section">Where do you want your order sent?</h2>
+    <div class="bg-gray padded-container">
+      <h3>Shipping Address</h3>
+      {{aeo-checkbox label='Ship to my billing address' checked=true}}
+
+      <h3>Shipping Speed <small>(Estimated)</small></h3>
+      <div class="checkout-shipping-speed well">
+        <div class="container-xs-height row">
+          <span class="col-xs-height col-middle col-xs-7">Arrives by, February 04 <small>(Standard)</small></span>
+          <span class="col-xs-height col-middle col-xs-5 text-bold text-right">{{currency-display value='$7.00'}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-md-4 col-lg-4">
+    <h2 class="section">What's the damage?</h2>
+    {{partial 'cart/summary'}}
+    {{partial 'cart/discount-code'}}
+  </div>
+
+  <button class="btn btn-default btn-block">Place Order</button>
+</div>

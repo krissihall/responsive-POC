@@ -1,7 +1,14 @@
 <div class="application-wrapper">
-  {{partial 'header/header'}}
-  {{view 'promo/homepage-pushdown'}}
-  {{outlet}}
-  {{partial 'footer/footer'}}
+  {{#if isCheckoutPage}}
+    {{partial 'header/checkout-header'}}
+    {{partial 'checkout/login-bar'}}
+    {{outlet}}
+    {{partial 'footer/checkout-footer'}}
+  {{else}}
+    {{partial 'header/header'}}
+    {{view 'promo/homepage-pushdown'}}
+    {{outlet}}
+    {{partial 'footer/footer'}}
+  {{/if}}
 </div>
 {{view 'utilities/window-controls'}}

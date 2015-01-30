@@ -3,6 +3,10 @@ import jQuery from 'jquery';
 
 export default Ember.Controller.extend({
 
+  isCheckoutPage: false,
+  isCartPage: false,
+  currentPath: null,
+
   marginTop: 0,
   marginBottom: 0,
   marginRight: 0,
@@ -26,6 +30,26 @@ export default Ember.Controller.extend({
   isLayoutChanged: false,
 
   isDiscountFormVisible: false,
+
+  isCurrentPathChanged: function(){
+    if(this.get('currentPath') === 'checkout'){
+      this.set('isCheckoutPage', true);
+    } else {
+      this.set('isCheckoutPage', false);
+    }
+    this._setPageClassToBody();
+  }.observes('currentPath'),
+
+  _setPageClassToBody: function(){
+    var cssClass = this._convertToCssClass();
+    if(cssClass !== 'application' || cssClass !== 'index'){
+      Ember.$('body').addClass(cssClass);
+    }
+  },
+
+  _convertToCssClass: function(){
+    return this.get('currentPath').replace(/\./g, '-').dasherize();
+  },
 
   isDesktopStyles: function(){
     if(this.get('isMedium') || this.get('isLarge')) {
@@ -61,7 +85,7 @@ export default Ember.Controller.extend({
   }.on('init'),
 
   isBreakPointNameChanged: function(){
-    this.resetAllSizes();
+    this._resetAllSizes();
     this._setBreakPointName();
   }.observes('windowWidth'),
 
@@ -83,7 +107,7 @@ export default Ember.Controller.extend({
     }
   },
 
-  resetAllSizes: function(){
+  _resetAllSizes: function(){
     this.set('isXtrSmall', false);
     this.set('isSmall', false);
     this.set('isMedium', false);
