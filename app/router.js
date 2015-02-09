@@ -16,6 +16,7 @@ Router.map(function() {
   this.route("categories", function() {
     this.route("category");
   });
+  this.route("account");
 });
 
 export default Router;
