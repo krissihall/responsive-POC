@@ -7,6 +7,12 @@
       margin $padding-large-horizontal 0
       font-weight normal
       color $gray-light
+      
+.checkout-header
+  .aeoicon-eagle
+    font-size-to-em(90)
+    padding $padding-base-vertical 0
+    color $brand-primary
 
 .checkout-header-bag-icon
   text-align right
@@ -35,3 +41,36 @@
     vertical-align middle
     display inline-block
     max-width 80px
+    
+.checkout-bag-review-container
+  .checkout-bag-review
+    padding 0
+  .checkout-gift-options
+    margin-bottom $padding-base-horizontal
+    padding $padding-base-vertical 0
+    
+.checkout-bag-review
+  .items
+    max-height 75px
+    overflow-x scroll
+    margin-bottom $padding-base-horizontal
+    .item
+      margin 0 0 $padding-base-vertical
+      position relative
+      border 1px solid $gray-disabled
+      &:last-of-type
+        margin 0
+      .cart-item-details
+        p
+          margin 0
+          font-size-to-em(16)
+        .price
+          text-align right
+
+.checkout-button
+  @media screen and (max-width: $screen-md-max)
+    padding 0 $padding-base-horizontal
+  &.col-md-7,
+  &.col-lg-7
+    .checkout-place-order-button
+      margin-top $padding-large-horizontal

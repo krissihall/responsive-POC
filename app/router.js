@@ -12,6 +12,10 @@ Router.map(function() {
   this.route("cart");
 
   this.route("checkout");
+
+  this.route("categories", function() {
+    this.route("category");
+  });
 });
 
 export default Router;

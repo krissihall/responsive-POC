@@ -1,6 +1,6 @@
 <a class="header-hamburger visible-xs-block visible-sm-block" 
     {{action 'isNavigationOpenSlideUp' 'isNavigationOpen'}}>
-  {{glyph-icon set='aeo' type='mdot-hamburger'}}
+  {{glyph-icon set='aeo' type='menu'}}
 </a>
 
 <div class="hidden-xs hidden-sm visible-md-block visible-lg-block">
@@ -9,7 +9,7 @@
 
 {{#slide-in over=isNavigationOpen id="slide-in-xs-nav" dir="right" slideIn90=true disableBodyScroll=true}}
   <a {{action 'isNavigationOpenSlideDown' 'isNavigationOpen'}} {{bind-attr class="isNavigationOpen:show:hide :header-hamburger-open"}}>
-    {{glyph-icon set='aeo' type='mdot-hamburger'}}
+    {{glyph-icon set='aeo' type='menu' class='menu-open'}}
   </a>
   <div class="header-navigation-hamburger">
     {{partial 'header/search'}}

@@ -1,0 +1,20 @@
+<div {{bind-attr class="isFluidLayout:container-fluid:container :checkout-container :clearfix"}}>
+  <h2 class="clearfix">
+    <span class="col-xs-8">Choose Shipping Speed</span>
+    <small class="clickable text-right col-xs-4" {{action 'isShippingSpeedSlideDown' 'isShippingSpeedOpen'}}>(cancel)</small>
+  </h2>
+  <div class="shipping-speeds well-backdrop clearfix">
+    <div class="shipping-speed col-xs-12 well active clickable">
+      <div class="col-xs-8">Standard <small>3-7 business days</small></div>
+      <div class="col-xs-4 text-right">FREE</div>
+    </div>
+    <div class="shipping-speed col-xs-12 well clickable">
+      <div class="col-xs-8">Two-Day <small>2 business days</small></div>
+      <div class="col-xs-4 text-right">{{currency-display value="$15.00"}}</div>
+    </div>
+    <div class="shipping-speed col-xs-12 well clickable">
+      <div class="col-xs-8">Overnight <small>1 business days</small></div>
+      <div class="col-xs-4 text-right">{{currency-display value="$20.00"}}</div>
+    </div>
+  </div>
+</div>

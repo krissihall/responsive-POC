@@ -11,18 +11,23 @@ header
   .ae-logo
     display block
     color $brand-primary
-    font-size-to-em(150)
+    padding-bottom $padding-large-horizontal
+    font-size-to-em(110)
     &:before
       padding-left $padding-large-horizontal
-  .aeoicon-aeo-eagle
-    font-size-to-em(60)
+  .aeoicon-aeo
+    font-size-to-em(110)
     color $brand-primary
-  .aeoicon-aeo-eagle
+  .aeoicon-aeo
     text-align center
     padding $padding-base-vertical 0
   .header-hamburger
     font-size-to-em(40)
     text-align center
+  .header-hamburger-open
+    .menu-open
+      color #fff
+      text-align right
   .bag-count-icon
     position relative
     text-align center
@@ -40,6 +45,8 @@ header
       top 34%
       left 0
       right 0
+      color #fff
+      z-index 10
     &:hover
       text-decoration none
   .header-navigation
@@ -74,6 +81,9 @@ header
     padding 0
     .nav > li > a
       padding $padding-small-vertical $padding-small-horizontal
+    .usd-img
+      max-width 20px
+      margin-right 4px
   .header-search
     padding $padding-base-vertical 0
     text-align left

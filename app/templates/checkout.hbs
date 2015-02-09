@@ -29,6 +29,9 @@
       {{aeo-input label='Zip Code'}}
       {{aeo-input label='City'}}
       {{aeo-input label='State'}}
+      {{aeo-select label="State"
+          content=usStatesList 
+          class="checkout-state-select"}}
       {{aeo-input label='Country'}}
       {{aeo-input label='Billing Phone Number' disclaimer='in case there\'s a billing issue'}}
     </div>
@@ -39,7 +42,7 @@
       {{aeo-checkbox label='Ship to my billing address' checked=true}}
 
       <h3>Shipping Speed <small>(Estimated)</small></h3>
-      <div class="checkout-shipping-speed well">
+      <div class="checkout-shipping-speed well clickable" {{action 'isShippingSpeedSlideUp' 'isShippingSpeedOpen'}}>
         <div class="container-xs-height row">
           <span class="col-xs-height col-middle col-xs-7">Arrives by, February 04 <small>(Standard)</small></span>
           <span class="col-xs-height col-middle col-xs-5 text-bold text-right">{{currency-display value='$7.00'}}</span>
@@ -50,9 +53,23 @@
 
   <div class="col-xs-12 col-md-5 col-lg-5">
     <h2 class="section">What's the damage?</h2>
+    <div class="checkout-bag-review-container container-md-height hidden-xs hidden-sm">
+      <div class="checkout-bag-review col-middle col-md-height col-md-top col-md-9">
+       {{partial 'checkout/bag-review'}}
+      </div>
+      <div class="checkout-gift-options clickable col-md-height col-bottom col-md-3 text-right">
+        {{glyph-icon set='aeo' type='gift'}} Gift Options
+      </div>
+    </div>
     {{partial 'cart/summary'}}
     {{partial 'cart/discount-code'}}
   </div>
 
-  <button class="btn btn-default btn-block">Place Order</button>
+  <div class="checkout-button col-xs-12 col-md-7 col-lg-7">
+    <button class="checkout-place-order-button btn btn-block btn-default">Place Order</button>
+  </div>
 </div>
+
+{{#slide-in over=isShippingSpeedOpen id="slide-in-shipping-speed" dir="up" full=true disableBodyScroll=true}}
+  {{partial 'checkout/choose-shipping-speed'}}
+{{/slide-in}}

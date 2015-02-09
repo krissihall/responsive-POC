@@ -25,13 +25,13 @@
       <nav class='header-navigation col-xs-3 col-sm-2 col-md-10 col-md-height clearfix'>
         {{partial 'header/navigation'}}
       </nav>
-      {{glyph-icon type='aeo-eagle' set='aeo' 
+      {{glyph-icon type='aeo' set='aeo' 
           class='visible-xs-block visible-sm-block col-xs-6 col-sm-8 clickable'}}
 
       <a class="bag-count-icon visible-xs-inline-block visible-sm-inline-block 
-                hidden-md col-xs-3 col-sm-2"
+          hidden-md col-xs-3 col-sm-2"
           {{action 'isBagOpenSlideUp' 'isBagOpen'}}>
-        {{glyph-icon type='mdot-bag' set='aeo'}}
+        {{glyph-icon type='bag' set='aeo'}}
         <span class="bag-icon-count">4</span>
       </a>
     </div>
@@ -41,9 +41,9 @@
 
 {{#slide-in over=isBagOpen id="slide-in-xs-bag-open" dir="left" slideIn90=true disableBodyScroll=true}}
   <a {{bind-attr class=':bag-count-icon :hidden-md 
-      isBagOpen:show:hide'}}
+      isBagOpen:show:hide :bag-open'}}
       {{action 'isBagOpenSlideDown' 'isBagOpen'}}>
-    {{glyph-icon type='mdot-bag' set='aeo'}}
+    {{glyph-icon type='bag' set='aeo'}}
     <span class="bag-icon-count">4</span>
   </a>
   {{view 'cart/bag-overview'}}

@@ -19,7 +19,7 @@ module.exports = function(environment) {
     },
 
     contentSecurityPolicy: {
-      'img-src': "'self' http://aeo-o.scene7.com/ https://aeo-o.scene7.com/ http://pics.ae.com/",
+      'img-src': "'self' http://aeo-o.scene7.com/ https://aeo-o.scene7.com/ http://pics.ae.com/ https://pics.ae.com/",
       'font-src': "'self' data:"
     }
   };
