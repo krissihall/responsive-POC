@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'responsive',
     podModulePrefix: 'responsive/pods',
-    usePodsByDefault: true,
+    usePodsByDefault: false,
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
