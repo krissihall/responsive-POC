@@ -1,0 +1,41 @@
+code
+  a
+    color #c7254e
+    border-bottom 1px dotted #c7254e
+    text-decoration none
+    &:hover
+      text-decoration none
+      border-bottom-style solid
+
+.simplified-grid-container
+  margin-bottom 100px
+  
+  .panel-heading
+    a
+      font-size-to-em(30)
+      color #fff
+      text-decoration none
+  
+  .grid-demo
+    border 1px solid $gray-disabled
+    
+    div
+      background #cea
+      border 2px solid #fff
+      padding $padding-base-vertical $padding-base-horizontal
+      
+.code
+  margin-bottom 20px
+  
+  summary
+    font-size-to-em(18)
+  
+  .code-preview
+    background #fff
+    padding $padding-base-vertical $padding-base-horizontal
+    
+    xmp
+      margin 0
+      font-family Menlo, Monaco, Consolas, "Courier New", monospace
+      color #c7254e
+      font-size-to-em(16)

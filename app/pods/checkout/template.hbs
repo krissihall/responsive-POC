@@ -8,7 +8,7 @@
 
     <h2 class="section">How do you want to pay?</h2>
     <div class="bg-gray padded-container">
-      <button class="btn btn-drop btn-block">Pay with <img src="paypal.svg" alt="Paypal" class="paypal-logo" /></button>
+      <button class="btn btn-drop btn-block">Pay with <img src="/images/paypal.svg" alt="Paypal" class="paypal-logo" /></button>
       <button class="btn btn-drop btn-block">Use a Gift Card</button>
 
       <h3>Credit Card</h3>
@@ -51,24 +51,7 @@
     </div>
   </div>
 
-  <div class="col-xs-12 col-md-5 col-lg-5">
-    <h2 class="section">What's the damage?</h2>
-    <div class="checkout-bag-review-container container-md-height hidden-xs hidden-sm">
-      <div class="checkout-bag-review col-middle col-md-height col-md-top col-md-9">
-       {{partial 'checkout/bag-review'}}
-      </div>
-      <div class="checkout-gift-options clickable col-md-height col-bottom col-md-3 text-right">
-        {{glyph-icon set='aeo' type='gift'}} Gift Options
-      </div>
-    </div>
-    {{partial 'cart/summary'}}
-    {{partial 'cart/discount-code'}}
-  </div>
-
-  <div class="checkout-button col-xs-12 col-md-7 col-lg-7">
-    <button class="checkout-place-order-button btn btn-block btn-default">Place Order</button>
-  </div>
-</div>
+  {{view 'checkout/cart-details'}}
 
 {{#slide-in over=isShippingSpeedOpen id="slide-in-shipping-speed" dir="up" full=true disableBodyScroll=true}}
   {{partial 'checkout/choose-shipping-speed'}}

@@ -5,6 +5,7 @@ export default Ember.Controller.extend({
   needs: ['application'],
 
   isShippingSpeedOpen: false,
+  isDemo: true,
 
   isDiscountFormVisible: Ember.computed.alias('controllers.application.isDiscountFormVisible'),
   isFluidLayout: Ember.computed.alias('controllers.application.isFluidLayout'),

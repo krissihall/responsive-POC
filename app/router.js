@@ -17,6 +17,7 @@ Router.map(function() {
     this.route("category");
   });
   this.route("account");
+  this.route("simplified-grid");
 });
 
 export default Router;

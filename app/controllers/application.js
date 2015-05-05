@@ -7,14 +7,16 @@ export default Ember.Controller.extend({
   isCartPage: false,
   currentPath: null,
 
+  isDemo: true,
+
   marginTop: 0,
   marginBottom: 0,
   marginRight: 0,
   marginLeft: 0,
 
   xtrSmallBreak: 320,
-  smallBreak: 768,
-  mediumBreak: 1024,
+  smallBreak: 767,
+  mediumBreak: 1023,
   largeBreak: 1366,
 
   isXtrSmall: false,
@@ -34,6 +36,8 @@ export default Ember.Controller.extend({
   isCurrentPathChanged: function(){
     if(this.get('currentPath') === 'checkout'){
       this.set('isCheckoutPage', true);
+    } else if(this.get('currentPath') === 'simplified-grid') {
+      this.set('isDemo', false);
     } else {
       this.set('isCheckoutPage', false);
     }
@@ -92,16 +96,16 @@ export default Ember.Controller.extend({
   _setBreakPointName: function(){
     var windowWidth = window.innerWidth;
 
-    if(windowWidth < (this.get('smallBreak') - 1)){
+    if(windowWidth < this.get('xtrSmallBreak')){
       this.set('breakPointName', 'Xtr-Small');
       this.set('isXtrSmall', true);
-    } else if(windowWidth >= this.get('xtrSmallBreak') && windowWidth < (this.get('mediumBreak') - 1)){
+    } else if(windowWidth > this.get('xtrSmallBreak') && windowWidth <= this.get('smallBreak')){
       this.set('breakPointName', 'Small');
       this.set('isSmall', true);
-    } else if(windowWidth >= this.get('mediumBreak') && windowWidth < (this.get('largeBreak') - 1)){
+    } else if(windowWidth > this.get('smallBreak') && windowWidth <= this.get('mediumBreak')){
       this.set('breakPointName', 'Medium');
       this.set('isMedium', true);
-    } else if(windowWidth >= this.get('largeBreak')){
+    } else {
       this.set('breakPointName', 'Large');
       this.set('isLarge', true);
     }

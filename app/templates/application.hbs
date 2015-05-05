@@ -1,14 +1,19 @@
-<div class="application-wrapper">
-  {{#if isCheckoutPage}}
-    {{partial 'header/checkout-header'}}
-    {{partial 'checkout/login-bar'}}
-    {{outlet}}
-    {{partial 'footer/checkout-footer'}}
-  {{else}}
-    {{partial 'header/header'}}
-    {{view 'promo/homepage-pushdown'}}
-    {{outlet}}
-    {{partial 'footer/footer'}}
-  {{/if}}
-</div>
+{{#if isDemo}}
+  <div class="application-wrapper">
+    {{#if isCheckoutPage}}
+      {{partial 'header/checkout-header'}}
+      {{partial 'checkout/login-bar'}}
+      {{outlet}}
+      {{partial 'footer/checkout-footer'}}
+    {{else}}
+      {{partial 'header/header'}}
+      {{view 'promo/homepage-pushdown'}}
+      {{outlet}}
+      {{partial 'footer/footer'}}
+    {{/if}}
+  </div>
+{{else}}
+  {{outlet}}
+{{/if}}
+
 {{view 'utilities/window-controls'}}

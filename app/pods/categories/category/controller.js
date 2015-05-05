@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 
   isPromoPushDownOpen: false,
+  isDemo: true,
 
   needs: ['application'],
 

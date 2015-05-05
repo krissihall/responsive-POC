@@ -1,0 +1,64 @@
+<div class="application-wrapper">
+  <div class="simplified-grid-container">
+
+    <div {{bind-attr class="isFluidLayout:container-fluid:container :section"}}>
+      <h1>Simplified Grid Overview</h1>
+      <p>In order to better understand how to use the grid effectively, this is a simplified explanation complete with working examples. The grid has a total of <mark>12</mark> columns and you can implement them in any proportion you want as long as it equals 12.</p>
+    </div>
+
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <div {{bind-attr class="isFluidLayout:container-fluid:container"}}>
+            <a href="#cascading" data-toggle="collapse" data-parent="#accordion">
+              Cascading
+            </a>
+          </div>
+        </div>
+        <div id="cascading" class="panel-collapse collapse fade in">
+          <div class="panel-body">
+            <div {{bind-attr class="isFluidLayout:container-fluid:container"}}>
+              <p>Bootstrap is built with 4 base, breakpoints <mark>xs</mark>: extra small, <mark>sm</mark>: small, <mark>md</mark>: medium, <mark>lg</mark>: large.</p>
+
+              <p>The sizes cascade upward from the <mark>xs</mark> size. For example: if you want an element to span across 6 columns in the extra small, small, medium, and large; you would use <code>col-xs-6</code> and it would cascade upward in all sizes.</p>
+
+              <small><em>Note: Because the grid uses <code>float: left</code>, you will have to keep in mind that if you want an element to follow a grid, you will have to use the <code><a href="http://aelabs.aeo.ae.com:9001/css/#helper-classes-clearfix" target="_blank">clearfix</a></code> helper to clear your floats.</em></small>
+
+              <h2>Examples</h2>
+              <p>The example below will have 2 6-column elements across all break-points</p>
+              <div class="grid-demo clearfix">
+                <div class="col-xs-6">
+                  <code>col-xs-6</code>
+                </div>
+                <div class="col-xs-6">
+                  <code>col-xs-6</code>
+                </div>
+              </div><!-- demo-grid -->
+              <details class="code">
+                <summary>Code</summary>
+                <div class="code-preview">
+                  {{partial 'demo-code/cascading-example1'}}
+                </div>
+              </details>
+
+              <p>Say you want 2 columns in <mark>md</mark> and <mark>lg</mark> viewports, but you want 1 column in <mark>xs</mark> and <mark>sm</mark> viewports. You would include 2 different classes on your elements, a <code>col-xs-12</code> and a <code>col-md-6</code>.</p>
+              <div class="grid-demo clearfix">
+                <div class="col-xs-12 col-md-6"><code>col-xs-12</code> <code>col-md-6</code></div>
+                <div class="col-xs-12 col-md-6"><code>col-xs-12</code> <code>col-md-6</code></div>
+              </div><!-- grid-demo -->
+              <details class="code">
+                <summary>Code</summary>
+                <div class="code-preview">
+                  {{partial 'demo-code/cascading-example2'}}
+                </div>
+              </details>
+
+              <p>The reflow of elements can become as complicated as you would like it to be</p>
+            </div><!-- container-fluid -->
+          </div><!-- panel-body -->
+        </div><!-- panel-collapse -->
+      </div><!-- panel-primary -->
+
+    </div><!-- panel-group -->
+  </div><!-- simplified-grid-container -->
+</div><!-- application-wrapper -->

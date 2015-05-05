@@ -2,8 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
-  isPromoPushDownOpen: false,
-  isDemo: true,
+  isDemo: false,
 
   needs: ['application'],
 
@@ -11,12 +10,6 @@ export default Ember.Controller.extend({
 
   isFluidLayoutChanged: function(){
     this.set('isFluidLayout', this.get('controllers.application.isFluidLayout'));
-  }.property('isFluidLayout'),
-
-  actions: {
-
-    
-
-  }//actions
+  }.property('isFluidLayout')
 
 });

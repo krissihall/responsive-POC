@@ -10,6 +10,7 @@ export default Ember.Route.extend({
     controller.set('isNavigationOpen', false);
     controller.set('isBagOpen', false);
     controller.set('isPromoPushDownOpen', false);
+    controller.set('isDemo', true);
 
     controller._resetAllSizes();
     controller._setBreakPointName();
